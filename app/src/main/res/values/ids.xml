@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="button_done" type="id" />
+    <item name="edit_nickname" type="id" />
+    <item name="view_nickname" type="id" />
+    <item name="view_count" type="id" />
+    <item name="box_6" type="id" />
+    <item name="box_2" type="id" />
+    <item name="box_7" type="id" />
+    <item name="box_3" type="id" />
+    <item name="box_1" type="id" />
+    <item name="box_4" type="id" />
+    <item name="box_8" type="id" />
+    <item name="box_18" type="id" />
+    <item name="box_22" type="id" />
+    <item name="box_24" type="id" />
+    <item name="button" type="id" />
+    <item name="box_17" type="id" />
+    <item name="box_21" type="id" />
+    <item name="box_23" type="id" />
+    <item name="box_16" type="id" />
+    <item name="box_19" type="id" />
+    <item name="box_25" type="id" />
+    <item name="box_20" type="id" />
+    <item name="box_5" type="id" />
+    <item name="box_9" type="id" />
+    <item name="box_12" type="id" />
+    <item name="box_14" type="id" />
+    <item name="box_13" type="id" />
+    <item name="box_11" type="id" />
+    <item name="box_15" type="id" />
+    <item name="box_10" type="id" />
+</resources>

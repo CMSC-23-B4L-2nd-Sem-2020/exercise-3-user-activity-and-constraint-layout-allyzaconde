@@ -2,4 +2,7 @@
     <string name="app_name">exer3_conde_b4l</string>
     <string name="nickname">Nickname</string>
     <string name="done">Done</string>
+    <string name="message">Please put a name!</string>
+    <string name="box"></string>
+    <string name="reset">Reset</string>
 </resources>
