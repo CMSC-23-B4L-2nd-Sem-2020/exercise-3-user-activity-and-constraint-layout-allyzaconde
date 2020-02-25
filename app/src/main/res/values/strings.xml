@@ -5,4 +5,5 @@
     <string name="message">Please put a name!</string>
     <string name="box"></string>
     <string name="reset">Reset</string>
+    <string name="winner">Congratulations! You Won! :)</string>
 </resources>
