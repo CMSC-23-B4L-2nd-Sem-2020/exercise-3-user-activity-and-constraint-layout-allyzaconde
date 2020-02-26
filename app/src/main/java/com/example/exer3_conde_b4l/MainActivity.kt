@@ -26,8 +26,8 @@ class MainActivity : AppCompatActivity() {
             updateNickname(it)
         }
         moveCountView = findViewById(R.id.view_count)
+
         setListeners()
-        check()
     }
 
     fun updateNickname(view: View) {
@@ -36,10 +36,9 @@ class MainActivity : AppCompatActivity() {
 
         nicknameTextView.text = nicknameEditText.text
 
-            nicknameEditText.visibility = View.GONE
-            view.visibility = View.GONE
-            nicknameTextView.visibility = View.VISIBLE
-
+        nicknameEditText.visibility = View.GONE
+        view.visibility = View.GONE
+        nicknameTextView.visibility = View.VISIBLE
 
         val inputMethodManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
         inputMethodManager.hideSoftInputFromWindow(view.windowToken, 0)
@@ -101,12 +100,18 @@ class MainActivity : AppCompatActivity() {
         }
         moveCount++
         moveCountView.text = moveCount.toString()
+        if(moveCount == 1){
+            moveCountView.append(" Move\n")
+        }else{
+            moveCountView.append(" Moves\n")
+        }
 
         for(item in (0..24)){
             if(getId(item) == view.id){
                 checkLights(item)
             }
         }
+        check(view)
     }
 
     private fun checkLights(int:Int){
@@ -170,13 +175,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     @SuppressLint("ResourceType")
-    private fun check(){
+    private fun check(view: View){
+        var counter = 0
         for(i in (0..24)){
-            if(array[i]==0){
-                return
+            if(array[i]==1){
+                counter++
             }
         }
-        moveCountView = findViewById(R.string.winner)
+        println(counter)
+        if(counter == 25){
+            val winner:TextView =findViewById(R.id.view_count)
+            winner.setText(R.string.winner)
+            winner.append(" ")
+            winner.append(moveCount.toString())
+            winner.append(" moves :)")
+        }else{
+            return
+        }
     }
-
 }
