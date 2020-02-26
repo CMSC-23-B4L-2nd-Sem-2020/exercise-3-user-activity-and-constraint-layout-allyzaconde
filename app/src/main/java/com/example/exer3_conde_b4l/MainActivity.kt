@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
     private var moveCount:Int = 0
     private lateinit var moveCountView:TextView
     private val array: IntArray = intArrayOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)
+    private var check:Boolean = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -111,7 +112,12 @@ class MainActivity : AppCompatActivity() {
                 checkLights(item)
             }
         }
+        if(check){
+            retry(view)
+            check = false
+        }
         check(view)
+
     }
 
     private fun checkLights(int:Int){
@@ -182,15 +188,16 @@ class MainActivity : AppCompatActivity() {
                 counter++
             }
         }
-        println(counter)
         if(counter == 25){
             val winner:TextView =findViewById(R.id.view_count)
             winner.setText(R.string.winner)
             winner.append(" ")
             winner.append(moveCount.toString())
             winner.append(" moves :)")
+            check = true
         }else{
             return
         }
+
     }
 }
